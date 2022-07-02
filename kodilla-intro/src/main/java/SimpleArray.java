@@ -6,5 +6,7 @@ public class SimpleArray {
         books[2] = "Star Wars Darth Bane - Zasada Dwóch";
         books[3] = "Dzieci Hurina";
         books[4] = "Pan Lodowego Ogrodu";
+        int numberOfElements = books.length;
+        System.out.println("moja tablica zawiera " + numberOfElements + " elementow");
     }
 }
