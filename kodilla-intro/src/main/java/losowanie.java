@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class losowanie {
     public static int getCountOfRandomNumber(int max) {
         Random random = new Random();
