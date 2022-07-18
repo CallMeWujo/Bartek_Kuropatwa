@@ -24,7 +24,7 @@ public class Notebook {
         } else if (this.weight > 1000 && this.weight < 1700) {
             System.out.print("this notebook is quite heavy, ");
         } else {
-            System.out.print("this notebook is very heavy");
+            System.out.print("this notebook is very heavy, ");
         }
     }
     public void checkYear() {
