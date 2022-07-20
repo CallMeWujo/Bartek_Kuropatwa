@@ -5,14 +5,26 @@ public class UserNames {
         User Marcin = new User("Marcin", 29);
         User Iwona = new User("Iwona", 60);
 
-        String[] User = new String[4];
-        User[0] = Bartek.getName() + Bartek.getAge();
-        User[1] = Pawel.getName() + Pawel.getAge();
-        User[2] = Marcin.getName() + Marcin.getAge();
-        User[3] = Iwona.getName() + Iwona.getAge();
+        String[] users = {Bartek.getName(), Pawel.getName(), Marcin.getName(), Iwona.getName()};
+        double[] age = {Bartek.getAge(), Pawel.getAge(), Marcin.getAge(), Iwona.getAge()};
 
-        int numberOfElements = User.length;
-        System.out.println(numberOfElements);
+        int numberOfUsers = users.length;
+        System.out.println(numberOfUsers);
 
+        double sum = 0.0;
+
+        for (int i = 0; i < age.length; i++) {
+            sum = sum + age[i];
+            System.out.println(sum);
+
+        }
+        double averageAgeOfUsers = sum / users.length;
+        System.out.println(averageAgeOfUsers);
+
+        for (int i=0; i < users.length; i++) {
+            if (age[i] < averageAgeOfUsers) {
+                System.out.println(users[i]);
+            }
+        }
     }
 }
