@@ -30,4 +30,5 @@ public class Grades {
         double averageGradeAmount = sum / gradesAmount;
         return averageGradeAmount;
     }
+
 }
