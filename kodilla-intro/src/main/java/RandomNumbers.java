@@ -19,7 +19,7 @@ public class RandomNumbers {
             result++;
 
         }
-        return maxRoll;
+        return result;
 
 
     }
