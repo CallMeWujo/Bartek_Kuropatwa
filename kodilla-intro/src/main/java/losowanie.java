@@ -1,19 +1,32 @@
 import java.util.Random;
 
 public class losowanie {
-    public static int getCountOfRandomNumber(int max) {
+    public static int getCountOfRandomNumber() {
         Random random = new Random();
+        int minRoll = 0;
+        int maxRoll = 30;
         int result = 0;
         int sum = 0;
-        while (sum < max) {
-            int temp = random.nextInt(10);
+        while (sum <= 5000) {
+            int temp = random.nextInt(30);
+            if (temp < minRoll) {
+                minRoll = temp;
+            }
+            if (temp > maxRoll) {
+                maxRoll = temp;
+            }
             sum = sum + temp;
             result++;
+
         }
-        return result;
+        return maxRoll;
+
+
+
     }
     public static void main(String[] args) {
-        int randomNumbers  = getCountOfRandomNumber(10);
+        int randomNumbers = getCountOfRandomNumber();
                 System.out.println(randomNumbers);
     }
 }
+
