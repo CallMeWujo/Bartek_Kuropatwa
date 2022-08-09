@@ -19,6 +19,7 @@ public class RandomNumbers {
             result++;
 
         }
+
         return result;
 
 
