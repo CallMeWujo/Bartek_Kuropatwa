@@ -19,6 +19,7 @@ public class RandomNumbers {
             result++;
 
         }
+        System.out.println(minRoll);
 
         return result;
 
@@ -28,5 +29,6 @@ public class RandomNumbers {
     public static void main(String[] args) {
         int randomNumbers = randomNumber(5000);
         System.out.println("liczba losowan to " + randomNumbers);
+
     }
 }
