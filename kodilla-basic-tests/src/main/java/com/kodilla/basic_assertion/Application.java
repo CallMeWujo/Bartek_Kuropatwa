@@ -5,8 +5,8 @@ public class Application {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
-        int sumResult = calculator.sum(5,8);
-        boolean correct = ResultChecker.assertEquals(13, sumResult);
+        int sumResult = calculator.sum(a, b);
+        boolean correct = ResultChecker.assertEquals(13, sumResult,12.9);
 
         if (correct) {
             System.out.println("Metoda sum działa poprawnie dla liczb " + a + " i " + b);
@@ -16,7 +16,7 @@ public class Application {
 
         Calculator calculator1 = new Calculator();
         int subResult = calculator.sub(5,8);
-        boolean correct1 = ResultChecker.assertEquals(-3, subResult);
+        boolean correct1 = ResultChecker.assertEquals(-3, subResult, -2.9);
 
         if (correct1) {
             System.out.println("Metoda sub działa poprawnie dla liczb " + a + " i " + b);
@@ -26,7 +26,7 @@ public class Application {
 
         Calculator calculator2 = new Calculator();
         int mulResult = calculator.mul(5);
-        boolean correct2 = ResultChecker.assertEquals(25,mulResult);
+        boolean correct2 = ResultChecker.assertEquals(25,mulResult, 24.9);
 
         if (correct2) {
             System.out.println("Metoda mul działa poprawnie dla liczby " + a);
