@@ -12,8 +12,12 @@ public class CashMachine {
         this.completedTransactions = new int[0];
     }
 
-    public double atmBalance() {
-        return balance;
+    public int AtmBalance() {
+        int sum = 0;
+        for (int i = 0; i < completedTransactions.length; i++) {
+            sum += completedTransactions[i];
+        }
+        return sum;
     }
 
     public int Transactions() {
@@ -44,6 +48,7 @@ public class CashMachine {
         }
         return sum/ completedTransactions.length;
     }
+
 }
 
 

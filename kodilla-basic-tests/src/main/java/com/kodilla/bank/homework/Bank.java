@@ -16,4 +16,5 @@ public class Bank {
         this.ATM3 = new CashMachine();
     }
 
+
 }

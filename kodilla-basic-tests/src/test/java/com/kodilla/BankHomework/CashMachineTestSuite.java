@@ -27,4 +27,15 @@ public class CashMachineTestSuite {
         assertEquals(-450, completedTransaction[2]);
         assertEquals(-1000, completedTransaction[3]);
     }
+    @Test
+    public void shouldCalculateBalanceOfATM() {
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.add(1200);
+        cashMachine.add(750);
+        cashMachine.add(-450);
+        cashMachine.add(-1000);
+
+        int completedTransaction = cashMachine.AtmBalance();
+        assertEquals(500,completedTransaction);
+    }
 }
