@@ -30,6 +30,20 @@ public class CashMachine {
     public int[] getCompletedTransactions() {
         return completedTransactions;
     }
+    public double getAveragePayMent() {
+        double sum = 0;
+        for (int i = 0; i > completedTransactions[i]; i++) {
+            sum += completedTransactions[i];
+        }
+        return sum/completedTransactions.length;
+    }
+    public double getAveragePayCheck() {
+        double sum = 0;
+        for (int i = 0;i < completedTransactions[i]; i++) {
+            sum += completedTransactions[i];
+        }
+        return sum/ completedTransactions.length;
+    }
 }
 
 
