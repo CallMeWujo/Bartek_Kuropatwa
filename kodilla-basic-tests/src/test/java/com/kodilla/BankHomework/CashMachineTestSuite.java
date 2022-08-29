@@ -70,6 +70,27 @@ public class CashMachineTestSuite {
         cashMachine.add(7300);
         cashMachine.add(499);
         double averagePaycheck = cashMachine.getAveragePaycheckNumber();
-        assertEquals(10,averagePaycheck,0.1);
+        assertEquals(-9120,averagePaycheck,0.1);
+    }
+    @Test
+    public void shouldCalculateSumOfPayments() {
+        CashMachine cashMachine =new CashMachine();
+        cashMachine.add(4100);
+        cashMachine.add(2900);
+        cashMachine.add(-4300);
+        cashMachine.add(-2100);
+        double sumOfPayments = cashMachine.getSumOfAllPayments();
+        assertEquals(7000,sumOfPayments);
+    }
+    @Test
+    public void shouldCalculateSumOfPaychecks(){
+        CashMachine cashMachine =new CashMachine();
+        cashMachine.add(71000);
+        cashMachine.add(5950);
+        cashMachine.add(-16200);
+        cashMachine.add(-550);
+        cashMachine.add(-6100);
+        double sumOfPaychecks = cashMachine.getSumOfAllPaycheck();
+        assertEquals(-22850,sumOfPaychecks);
     }
 }

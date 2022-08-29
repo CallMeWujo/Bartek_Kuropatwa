@@ -54,10 +54,10 @@ public class CashMachine {
 
     public int getSumOfAllPaycheck() {   //suma wszystkich wyplat z bankomatu (-)
         int sumOfAllPaycheck = 0;
-        for (int i = 0; i < completedTransactions[i]; i++) {
+        for (int i = 0; i < completedTransactions.length; i++) {
             if (completedTransactions[i] > 0)
                 continue;
-            sumOfAllPaycheck += completedTransactions[i];
+                sumOfAllPaycheck += completedTransactions[i];
         }
         return sumOfAllPaycheck;
     }
