@@ -19,6 +19,7 @@ public class CashMachineTestSuite {
         cashMachine.add(750);
         cashMachine.add(-450);
         cashMachine.add(-1000);
+        cashMachine.add(0);
 
         int[] completedTransaction = cashMachine.getCompletedTransactions();
         assertEquals(4,completedTransaction.length);

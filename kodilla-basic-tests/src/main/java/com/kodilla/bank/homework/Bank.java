@@ -1,7 +1,25 @@
 package com.kodilla.bank.homework;
 
 public class Bank {
-    public CashMachine[] atmList;
+    private CashMachine[] atmList;
+    private int size;
+
+    public Bank() {
+        this.size = 0;
+        this.atmList = new CashMachine[0];
+    }
+
+    public void add(CashMachine atm) {
+        this.size++;
+        CashMachine[] newTab = new CashMachine[this.size];
+        System.arraycopy(atmList, 0, newTab, 0, atmList.length);
+        newTab[this.size - 1] = atm;
+        this.atmList = newTab;
+    }
+    public CashMachine[] getAtmList() {
+        return atmList;
+    }
+
 
     public int getBalanceOfAllATMs() {  // stan konta wszystkich bankowatów
         int sum = 0;
@@ -37,7 +55,7 @@ public class Bank {
     public int getValueOfAllPayments() { //suma wpłat do wszystkich bankomatów
         int sum = 0;
         for (int i =0; i < atmList.length; i++) {
-            if (atmList[i].getSumOfAllPayments() > 0)
+            if (atmList[i].getSumOfAllPayments() < 0)
                 continue;
             sum += atmList[i].getSumOfAllPayments();
         }

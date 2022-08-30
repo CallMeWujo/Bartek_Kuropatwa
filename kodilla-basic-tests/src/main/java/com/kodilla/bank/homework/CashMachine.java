@@ -44,7 +44,7 @@ public class CashMachine {
 
     public int getSumOfAllPayments() {   // suma wszystkich wplat do bankomatu (+)
         int sumOfAllPayments = 0;
-        for (int i = 0; i < completedTransactions[i]; i++) {
+        for (int i = 0; i < completedTransactions.length; i++) {
             if (completedTransactions[i] < 0)
                 continue;
                 sumOfAllPayments += completedTransactions[i];
