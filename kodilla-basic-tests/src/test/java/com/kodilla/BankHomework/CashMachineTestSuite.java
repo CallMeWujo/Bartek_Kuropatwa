@@ -21,6 +21,7 @@ public class CashMachineTestSuite {
         cashMachine.add(-1000);
 
 
+
         int[] completedTransaction = cashMachine.getCompletedTransactions();
         assertEquals(4,completedTransaction.length);
         assertEquals(1200,completedTransaction[0]);
