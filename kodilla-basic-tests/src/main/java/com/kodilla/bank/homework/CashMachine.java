@@ -16,6 +16,7 @@ public class CashMachine {
         System.arraycopy(completedTransactions, 0, newTab, 0, completedTransactions.length);
         newTab[this.size - 1] = value;
         this.completedTransactions = newTab;
+
     }
 
     public int[] getCompletedTransactions() {
@@ -25,7 +26,7 @@ public class CashMachine {
     public int getNumberOfWithdrawalFromATM(){   // ilosc wyplat z bankomatu (-)
         int sum = 0;
         for (int i = 0; i < completedTransactions.length; i++){
-            if (completedTransactions[i] > 0)
+            if (completedTransactions[i] > -1)
                 continue;
             sum++;
         }
@@ -35,9 +36,11 @@ public class CashMachine {
     public int getNumberOfDepositToAtm() {   // ilosc wplat do bankomatu (+)
         int sum = 0;
         for (int i = 0;i < completedTransactions.length; i++) {
-            if (completedTransactions[i] < 0)
+            if (completedTransactions[i] < 1)
                 continue;
             sum++;
+
+
         }
         return sum;
     }
@@ -74,25 +77,6 @@ public class CashMachine {
             return 0;
         }
         return this.getSumOfAllPaycheck() / this.getNumberOfWithdrawalFromATM();
-    }
-
-    public double getAveragePayment() {   // srednia kwota wplacana (+)
-        double sum = 0;
-        for (int i = 0; i < completedTransactions.length; i++) {
-            if (completedTransactions[i] < 0)
-                continue;
-            sum += completedTransactions[i];
-        }
-        return sum;
-    }
-    public double getAveragePaycheck() {    // srednia kwota wyplacana (-)
-        double sum = 0;
-        for (int i = 0;i < completedTransactions[i]; i++) {
-            if (completedTransactions[i] > 0)
-                continue;
-            sum += completedTransactions[i];
-        }
-        return sum;
     }
 
     public int getAtmBalance() {    // stan konta bankomatu

@@ -57,6 +57,7 @@ public class BankTestSuite {
         bank.add(atm1);
         atm1.add(15000);
         atm1.add(7500);
+        atm1.add(0);                   // nie liczy sie jako transakcja
 
         CashMachine atm2 = new CashMachine();
         bank.add(atm2);
@@ -75,6 +76,7 @@ public class BankTestSuite {
         atm.add(-200);
         atm.add(-1000);
         atm.add(1000);
+        atm.add(0);
 
         CashMachine atm1 = new CashMachine();
         bank.add(atm1);
@@ -100,6 +102,7 @@ public class BankTestSuite {
         atm.add(400);
         atm.add(1200);
         atm.add(700);
+        atm.add(0);
 
         CashMachine atm1 = new CashMachine();
         bank.add(atm1);
@@ -124,6 +127,7 @@ public class BankTestSuite {
         atm.add(-1100);
         atm.add(200);
         atm.add(-200);
+        atm.add(0);
 
         CashMachine atm1 = new CashMachine();
         bank.add(atm1);
