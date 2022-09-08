@@ -10,9 +10,9 @@ public class SchoolDirectory {
     public static void main(String[] args) {
         Map<Principal, School> principalSchoolMap = new HashMap<>();
 
-        Principal jan = new Principal("Jan", "Kowalski", "Sp nr 8 im. Marii Curie-skłodowskiej");
-        Principal maria = new Principal("Maria", "Kowalska", "Zst nr 4");
-        Principal adam = new Principal("Adam", "Nowak", "Sp nr 10 im. Komisji Edukacji Narodowej");
+        Principal jan = new Principal("Jan", "Kowalski", "Sp nr 8 im. Marii Curie-skłodowskiej,");
+        Principal maria = new Principal("Maria", "Kowalska", "Zst nr 4,");
+        Principal adam = new Principal("Adam", "Nowak", "Sp nr 10 im. Komisji Edukacji Narodowej,");
 
 
         School janSchool = new School(Arrays.asList(21,27,31,19,29));
@@ -24,5 +24,10 @@ public class SchoolDirectory {
         principalSchoolMap.put(adam, adamSchool);
 
         System.out.println(principalSchoolMap.get(jan));
+        System.out.println("----------------------------------");
+
+        for (Map.Entry<Principal, School> principalSchoolEntry : principalSchoolMap.entrySet())
+            System.out.println(principalSchoolEntry.getKey().getFirstname()+ " " + principalSchoolEntry.getKey().getLastname()
+                    + " Name of School: " + principalSchoolEntry.getKey().getSchoolName() + " Number of Students: " + principalSchoolEntry.getValue().getSum());
     }
 }
