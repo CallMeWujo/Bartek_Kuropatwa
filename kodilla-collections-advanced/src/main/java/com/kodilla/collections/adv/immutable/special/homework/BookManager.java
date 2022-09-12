@@ -10,13 +10,8 @@ public class BookManager {
         Book checkbook = new Book(author, title);
 
         for (Book checkbooks : books) {
-            if (checkbooks.getTitle().equals(title)) {
-                System.out.println(" same title!");
-
-                return checkbooks;
-            }
-            if (checkbooks.getAuthor().equals(author)) {
-                System.out.println(" same author!");
+            if (checkbooks.getTitle().equals(title) && checkbooks.getAuthor().equals(author)) {
+                System.out.println(" same title and author");
 
                 return checkbooks;
             }
