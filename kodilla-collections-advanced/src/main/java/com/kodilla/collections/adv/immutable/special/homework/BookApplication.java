@@ -7,7 +7,7 @@ public class BookApplication {
         Book book = BookManager.createBook("J.R.R. Tolkien", "Silmarillion");
         Book book1 = BookManager.createBook("Drew Karpyshyn", "Darth Bane");
         Book book2 = BookManager.createBook("Henryk Sienkiewicz", "Quo Vadis");
-        Book book3 = BookManager.createBook("J.R.R Tolkien", "Silmarillion");
+        Book book3 = BookManager.createBook("J.R.R. Tolkien", "Silmarillion");
 
         System.out.println(book);
         System.out.println(book1);
