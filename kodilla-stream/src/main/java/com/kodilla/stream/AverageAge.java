@@ -10,8 +10,5 @@ public class AverageAge {
                 .average()
                 .getAsDouble();
         System.out.println(avg);
-
-
-
     }
 }
