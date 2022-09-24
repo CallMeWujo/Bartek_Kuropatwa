@@ -24,12 +24,15 @@ public class Application {
 
 
         for (Student student : students) {
-            Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
-
-            String name = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+            String name = getTeacherName(student);
             System.out.println("uczen: " + student.getName() + ", " + "nauczyciel: " + name);
-
         }
+
+    }
+    public static String getTeacherName(Student student) {
+        Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
+        String name = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+        return name;
 
     }
 }
