@@ -11,7 +11,7 @@ class WarehouseTestSuite {
 
         warehouse.addOrder(new Order("7"));
         String result = warehouse.getOrder("7").getNumber();
-        assertEquals(7,result);
+        assertEquals("7",result);
 
 
     }
