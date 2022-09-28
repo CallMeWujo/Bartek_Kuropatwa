@@ -20,7 +20,8 @@ class GamblingMachineTestSuite {
         numbers.add(n4);
         numbers.add(n5);
         numbers.add(n6);
-        assertEquals(true,gamblingMachine.howManyWins(numbers) >= 0 & gamblingMachine.howManyWins(numbers) <=6);
+        int result = gamblingMachine.howManyWins(numbers);
+        assertTrue(result >= 0 & result <=6);
 
     }
     @ParameterizedTest
