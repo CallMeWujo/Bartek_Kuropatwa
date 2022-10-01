@@ -7,6 +7,7 @@ public class Person {
     public Person(double heightInMeters, double weightInKilogram) {
         this.heightInMeters = heightInMeters;
         this.weightInKilogram = weightInKilogram;
+
     }
 
     public String getBMI() {

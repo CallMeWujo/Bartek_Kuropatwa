@@ -11,8 +11,6 @@ public class IntegerSources {
                 Arguments.of(1.70, 100,"Obese Class I (Moderately obese)"),
                 Arguments.of(1.88, 170, "Obese Class IV (Morbidly Obese)")
 
-
-
         );
     }
 }

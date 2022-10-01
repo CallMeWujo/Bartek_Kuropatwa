@@ -12,8 +12,6 @@ class PersonTestSuite {
     public void shouldCalculateBMI (double heightInMeters, double weightInKilogram, String text) {
         Person person = new Person(heightInMeters, weightInKilogram);
         assertEquals(text, person.getBMI());
-
-
     }
 
 }
