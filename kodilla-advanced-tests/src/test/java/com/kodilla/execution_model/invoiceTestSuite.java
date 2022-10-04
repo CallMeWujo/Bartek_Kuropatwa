@@ -31,7 +31,6 @@ class invoiceTestSuite {
     public void shouldReturnNullWhenPassingNegativeIndex() {
         Item negativeIndex = invoice.getItem(-1);
         assertNull(negativeIndex);
-
     }
 
     @Test
