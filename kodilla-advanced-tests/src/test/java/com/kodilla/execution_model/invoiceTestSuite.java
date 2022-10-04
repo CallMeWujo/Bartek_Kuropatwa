@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InvoiceTestSuite {
+class invoiceTestSuite {
 
     Invoice invoice = new Invoice();
     Item ham = new Item("ham", 2.80);
