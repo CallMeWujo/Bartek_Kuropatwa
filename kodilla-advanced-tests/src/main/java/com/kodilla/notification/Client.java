@@ -1,2 +1,5 @@
-package com.kodilla.notification;public interface Client {
+package com.kodilla.notification;
+
+public interface Client {
+    void receive(Notification notification);
 }
