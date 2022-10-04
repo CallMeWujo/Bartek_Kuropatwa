@@ -13,7 +13,7 @@ public class Shop {
     }
     public List<Order> getOrdersBasedOnTheTransferredScope (LocalDate from, LocalDate to) {
         return orderList.stream()
-                .filter(d -> d.getDate().equals(from)  && d.getDate().equals(to))
+                .filter(d -> d.getDate().isAfter(from) && d.getDate().isBefore(to))
                 .collect(Collectors.toList());
     }
 
