@@ -2,6 +2,7 @@ package com.kodilla.mockito.homework;
 
 import com.kodilla.notification.Notification;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.HashMap;
@@ -48,6 +49,7 @@ class NotificationServiceTestSuite {
         notificationService.addClient(bartek,szczecin);
 
         notificationService.removeClient(bartek);
+        notificationService.sendAlertRcbToEveryone(alertRCB);
 
         Mockito.verify(bartek, Mockito.never()).receive(alertRCB);
 
@@ -55,6 +57,15 @@ class NotificationServiceTestSuite {
     }
     @Test
     public void shouldSendNotificationOnlyToClientsWhoSubscribedInCorrectLocalization() {
+        notificationService.addClient(bartek,torun);
+        notificationService.addClient(marcin,torun);
+        notificationService.addClient(pawel,torun);
+        notificationService.addClient(bartek,szczecin);
+        notificationService.addClient(marcin,poznan);
+
+        notificationService.sendAlertRcbToLocalization(alertRCB,torun);
+
+        Mockito.verify(bartek, Mockito.times(1)).receive(alertRCB);
 
 
     }
@@ -63,11 +74,13 @@ class NotificationServiceTestSuite {
         notificationService.addClient(marcin, poznan);
         notificationService.addClient(bartek,torun);
         notificationService.addClient(pawel,szczecin);
+        notificationService.addClient(marcin,torun);
 
         notificationService.sendAlertRcbToEveryone(alertRCB);
         Mockito.verify(marcin).receive(alertRCB);
         Mockito.verify(bartek).receive(alertRCB);
         Mockito.verify(pawel).receive(alertRCB);
+        Mockito.verify(marcin, Mockito.times(1)).receive(alertRCB);
 
     }
     @Test
