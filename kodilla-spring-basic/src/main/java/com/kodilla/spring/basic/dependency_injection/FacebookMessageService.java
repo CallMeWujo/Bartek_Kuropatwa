@@ -1,4 +1,4 @@
-package dependency_injection;
+package com.kodilla.spring.basic.dependency_injection;
 
 public class FacebookMessageService implements MessageService{
 
