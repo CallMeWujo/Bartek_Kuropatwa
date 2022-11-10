@@ -3,7 +3,7 @@ Feature: is number divisible by 3, is number divisible by 5, is number divisible
   Scenario Outline:
     Given number is <number>
     When  I ask number is divisible by three or five
-    Then  I should be told <answer>
+    Then  I should be <answer>
     Examples:
       | number | answer |
       | 3      | "Fizz" |
