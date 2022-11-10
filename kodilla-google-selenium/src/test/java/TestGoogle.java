@@ -1,5 +1,5 @@
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,14 +9,14 @@ public class TestGoogle {
 
     WebDriver driver;
 
-    @Before
+    @BeforeEach
     public void testSetup() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\IdeaProjects\\kodilla-course\\kodilla-google-selenium\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.navigate().to("http://wwww.google.com");
+        driver.navigate().to("https://www.google.com");
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         driver.close();
     }
