@@ -1,6 +1,6 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.GoogleSearch;
@@ -11,7 +11,7 @@ public class TestGoogle {
 
     @Before
     public void testSetup() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
         driver.navigate().to("http://wwww.google.com");
     }
@@ -25,6 +25,5 @@ public class TestGoogle {
     public void testGooglePage() {
         GoogleSearch googleSearch = new GoogleSearch(driver);
         googleSearch.searchResults();
-
     }
 }
