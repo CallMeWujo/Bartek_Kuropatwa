@@ -3,8 +3,8 @@ import java.util.Random;
 public class RandomNumbers {
     public static int randomNumber(int max) {
         Random random = new Random();
-        int minRoll = 0;
-        int maxRoll = 30;
+        int minRoll = 30;
+        int maxRoll = 0;
         int result = 0;
         int sum = 0;
         while (sum <= max) {
