@@ -15,6 +15,5 @@ public class Cashier {
         else {
             System.out.println("There is not enough money on your account");
         }
-
     }
 }
