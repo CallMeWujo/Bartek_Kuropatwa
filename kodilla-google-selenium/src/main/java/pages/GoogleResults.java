@@ -12,7 +12,6 @@ public class GoogleResults extends AbstractPage {
 
     @FindBy(css = "div[class='g']")
     private List<WebElement> results;
-
     public GoogleResults(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver, this);
