@@ -14,7 +14,6 @@ public class OpenRandomSearch extends GoogleResults{
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
-
     public WebElement clickInRandomPage(WebElement googleResults) {
         webElement = googleResults;
         webElement.click();

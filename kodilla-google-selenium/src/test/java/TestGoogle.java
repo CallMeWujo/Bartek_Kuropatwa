@@ -22,7 +22,6 @@ public class TestGoogle {
     public void tearDown() {
         driver.close();
     }
-
     @Test
     public void testGooglePage() {
         GoogleSearch googleSearch = new GoogleSearch(driver);

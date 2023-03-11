@@ -29,7 +29,6 @@ public class GoogleSearch extends AbstractPage {
         googleResults = loadResults(driver);
         googleResults.iSeeResults();
     }
-
     public GoogleResults loadResults(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(1))).click();
