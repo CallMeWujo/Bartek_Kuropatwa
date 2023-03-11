@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,7 @@ public class GoogleSearch extends AbstractPage {
     }
 
     public void searchResults() {
+        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
         PageFactory.initElements(driver, GoogleSearch.class);
         inputField.sendKeys("Kodilla");
         googleResults = loadResults(driver);
