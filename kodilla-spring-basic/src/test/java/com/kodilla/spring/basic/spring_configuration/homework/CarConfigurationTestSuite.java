@@ -5,11 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CarConfigurationTestSuite {
 
@@ -28,7 +23,7 @@ class CarConfigurationTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = (Car) context.getBean("getCar");
 
-        Assertions.assertFalse(car.hasHeadlightsTurnedOn());
+        Assertions.assertTrue(car.hasHeadlightsTurnedOn());
     }
 
 
