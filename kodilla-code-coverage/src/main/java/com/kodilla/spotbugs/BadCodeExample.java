@@ -1,2 +1,29 @@
-package com.kodilla.spotbugs;public class badCodeExample {
+package com.kodilla.spotbugs;
+
+import java.util.Objects;
+
+public class BadCodeExample {
+    private  String type;
+
+
+    public static double getPi() {
+        return Math.PI;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BadCodeExample)) return false;
+        BadCodeExample that = (BadCodeExample) o;
+        return Objects.equals(getType(), that.getType());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getType());
+    }
 }

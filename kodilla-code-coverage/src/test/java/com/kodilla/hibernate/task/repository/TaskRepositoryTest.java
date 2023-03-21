@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class TaskRepositoryTest {
+    class TaskRepositoryTest {
     @Autowired
     private TaskRepository taskRepository;
     private static final String DESCRIPTION = "Test: Learn Hibernate";
