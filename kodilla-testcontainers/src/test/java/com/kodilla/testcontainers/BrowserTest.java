@@ -1,7 +1,8 @@
 package com.kodilla.testcontainers;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -12,10 +13,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class BrowserTest {
-    public BrowserWebDriverContainer chromeContainer;
+    public static BrowserWebDriverContainer chromeContainer;
 
-    @Before
-    public void setUp() {
+    @BeforeAll
+    public static void setUp() {
         chromeContainer = new BrowserWebDriverContainer()
                 .withCapabilities(new ChromeOptions());
         chromeContainer.start();
@@ -31,8 +32,8 @@ public class BrowserTest {
                 new File("./build/screenshots/" + screenshot.getName()));
     }
 
-    @After
-    public void tearDown() {
+    @AfterAll
+    public static void tearDown() {
         chromeContainer.stop();
     }
 }
