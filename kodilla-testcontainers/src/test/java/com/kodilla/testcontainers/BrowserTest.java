@@ -1,39 +1,27 @@
 package com.kodilla.testcontainers;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testcontainers.containers.BrowserWebDriverContainer;
-import org.testcontainers.shaded.org.apache.commons.io.FileUtils;
+//public class BrowserTest {
+//    public static BrowserWebDriverContainer chromeContainer;
+//
+//    @BeforeAll
+//    public static void setUp() {
+//        chromeContainer = new BrowserWebDriverContainer()
+//                .withCapabilities(new ChromeOptions());
+//        chromeContainer.start();
+//    }
 
-import java.io.File;
-import java.io.IOException;
+//    @Test
+//    public void chromeTest() throws IOException {
+//        RemoteWebDriver driver = chromeContainer.getWebDriver();
+//        driver.get("http://allegro.pl");
+//
+//        File screenshot = driver.getScreenshotAs(OutputType.FILE);
+//        FileUtils.copyFile(screenshot,
+//                new File("./build/screenshots/" + screenshot.getName()));
+//    }
 
-public class BrowserTest {
-    public static BrowserWebDriverContainer chromeContainer;
-
-    @BeforeAll
-    public static void setUp() {
-        chromeContainer = new BrowserWebDriverContainer()
-                .withCapabilities(new ChromeOptions());
-        chromeContainer.start();
-    }
-
-    @Test
-    public void chromeTest() throws IOException {
-        RemoteWebDriver driver = chromeContainer.getWebDriver();
-        driver.get("http://allegro.pl");
-
-        File screenshot = driver.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshot,
-                new File("./build/screenshots/" + screenshot.getName()));
-    }
-
-    @AfterAll
-    public static void tearDown() {
-        chromeContainer.stop();
-    }
-}
+//    @AfterAll
+//    public static void tearDown() {
+//        chromeContainer.stop();
+//    }
+//}

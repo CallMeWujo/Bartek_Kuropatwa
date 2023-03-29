@@ -1,6 +1,5 @@
 package com.kodilla.testcontainers;
 
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -20,7 +19,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordingMode.RECORD_ALL;
 
-public class ApplicationTest {
+public class BusinessCardTest {
     @Rule
     public Network network = Network.newNetwork();
 
@@ -58,6 +57,7 @@ public class ApplicationTest {
         FileUtils.copyFile(screenshot, new File("./build/screenshots/" + screenshot.getName()));
 
         String title = driver.findElement(By.id("title")).getText();
-        assertEquals("My dockerized web page.", title);
+        assertEquals("Bartosz Kuropatwa", title);
     }
 }
+
